@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipe.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <div class="logo">🍳 RecipeNest</div>
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="favorites.html">Favorites</a>
+        </nav>
+        <div></div>
+      </div>
+    </header>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search recipes or ingredients..."
+      />
+
+      <button type="button" id="searchButton">Search</button>
+    </div>
+    <section>
+      <p id="noResults">
+        🔍<br />
+        <strong>No recipes found!</strong><br />
+        Try searching for another recipe or ingredient.
+      </p>
+      <div class="main">
+        <div
+          class="card"
+          data-ingredients="potato peas flour green chilli ginger cumin garam masala"
+        >
+          <button class="favorite-btn" data-food="samosa">♡</button>
+          <div>
+            <img src="/images/samosa.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Samosa</h3>
+            <p>⏱ 40 mins | 🍽 Snacks</p>
+            <p>
+              Crispy and golden samosas filled with spicy potatoes, peas, and
+              aromatic Indian spices.
+            </p>
+            <a href="detailedrecipe.html?food=samosa"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="poha flattened rice peanuts onion potato green chilli mustard seeds curry leaves turmeric lemon"
+        >
+          <button class="favorite-btn" data-food="poha">♡</button>
+          <div>
+            <img src="/images/poha.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Poha</h3>
+            <p>⏱ 20 mins | 🍽 Breakfast</p>
+            <p>
+              A light and healthy breakfast made with flattened rice, peanuts,
+              vegetables, and mild spices.
+            </p>
+            <a href="detailedrecipe.html?food=poha"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="noodles cabbage carrot capsicum onion garlic soy sauce vinegar chilli sauce"
+        >
+          <button class="favorite-btn" data-food="chowmein">♡</button>
+          <div>
+            <img src="/images/chowmein.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Chowmein</h3>
+            <p>⏱ 25 mins | 🍽 Snacks</p>
+            <p>
+              Spicy and tasty noodles tossed with fresh vegetables and flavorful
+              sauces.
+            </p>
+            <a href="detailedrecipe.html?food=chowmein"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="pasta tomato onion garlic capsicum tomato sauce oregano chilli flakes black pepper"
+        >
+          <button class="favorite-btn" data-food="pasta">♡</button>
+          <div>
+            <img src="/images/pasta.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Masala Pasta</h3>
+            <p>⏱ 25 mins | 🍽 Snacks</p>
+            <p>
+              Simple and tasty pasta cooked with onions, tomatoes, vegetables,
+              and flavorful spices.
+            </p>
+            <a href="detailedrecipe.html?food=pasta"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="paneer butter tomato onion cream ginger garlic garam masala kasuri methi"
+        >
+          <button class="favorite-btn" data-food="paneer">♡</button>
+          <div>
+            <img src="/images/PaneerButterMasala.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Paneer Butter Masala</h3>
+            <p>⏱ 45 mins | 🍽 Main Course</p>
+            <p>
+              A rich and creamy curry made with soft paneer, butter, tomatoes,
+              and aromatic spices.
+            </p>
+            <a href="detailedrecipe.html?food=paneer"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="wheat flour potato green chilli coriander cumin red chilli garam masala ghee"
+        >
+          <button class="favorite-btn" data-food="alooParatha">♡</button>
+          <div>
+            <img src="/images/aloo_paratha.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Aloo Paratha</h3>
+            <p>⏱ 35 mins | 🍽 Breakfast</p>
+            <p>
+              Soft and delicious Indian flatbread stuffed with a spicy mashed
+              potato filling.
+            </p>
+            <a href="detailedrecipe.html?food=alooParatha"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="rice urad dal potato onion mustard seeds curry leaves green chilli turmeric"
+        >
+          <button class="favorite-btn" data-food="dosa">♡</button>
+          <div>
+            <img src="/images/dosa.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Masala Dosa</h3>
+            <p>⏱ 45 mins | 🍽 Breakfast</p>
+            <p>
+              A crispy South Indian dosa filled with a spicy and flavorful
+              potato masala.
+            </p>
+            <a href="detailedrecipe.html?food=dosa"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          data-ingredients="basmati rice vegetables carrot peas beans potato onion tomato ginger garlic biryani masala mint coriander"
+        >
+          <button class="favorite-btn" data-food="biryani">♡</button>
+          <div>
+            <img src="/images/biryani.jpg" alt="" />
+          </div>
+          <div>
+            <h3>Veg Biryani</h3>
+            <p>⏱ 50 mins | 🍽 Main Course</p>
+            <p>
+              A flavorful and aromatic rice dish prepared with fresh vegetables,
+              herbs, and traditional spices.
+            </p>
+            <a href="detailedrecipe.html?food=biryani"
+              ><button>View Recipe</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>🍳 RecipeNest</h2>
+          <p>Simple recipes. Delicious moments.</p>
+        </div>
+        <div class="footer-column">
+          <h3>EXPLORE</h3>
+          <a href="index.html">Home</a>
+          <a href="recipes.html">All Recipes</a>
+          <a href="favorites.html">Favorites</a>
+        </div>
+        <div class="footer-column">
+          <h3>SUPPORT</h3>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Feedback</a>
+          <a href="#">Recipe Suggestions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RecipeNest</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/aradhya_shahi_/">Instagram</a>
+          <a href="https://www.linkedin.com/in/aradhyak983">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+    <script src="favorites.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>

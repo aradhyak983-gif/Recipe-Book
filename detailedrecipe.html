@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detailed Recipe</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fff8f1;
+        color: #2b211c;
+        overflow-x: hidden;
+      }
+      .header > div {
+        height: 75px;
+        background-color: #2b211c;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 50px;
+      }
+      .logo {
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+      }
+      .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .links a:hover {
+        color: #e9a23b;
+      }
+      .recipe-container {
+        max-width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+      }
+      #recipeImage {
+        width: 100%;
+        max-width: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+      }
+      .recipe-container > p {
+        width: 300px;
+        margin: 10px auto;
+        text-align: left;
+      }
+      h1 {
+        color: #2e7d32;
+        text-align: center;
+      }
+
+      h2 {
+        color: #2e7d32;
+        margin-top: 25px;
+        text-align: center;
+      }
+      .recipe-container ul {
+        width: 500px;
+        margin: 0 auto;
+        padding-left: 20px;
+        text-align: left;
+      }
+
+      .recipe-container li {
+        margin: 8px 0;
+        line-height: 1.5;
+      }
+      .back-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #2e7d32;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+      .footer {
+        background-color: #2b211c;
+        color: white;
+        padding: 45px 50px 15px;
+      }
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+        padding-bottom: 35px;
+      }
+      .footer-brand h2 {
+        text-align: left;
+        color: white;
+        margin: 0 0 8px;
+        font-size: 25px;
+      }
+      .footer-brand p {
+        margin: 0;
+        color: #d8cec7;
+        font-size: 15px;
+      }
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .footer-column h3 {
+        margin: 0 0 12px;
+        color: #e9a23b;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .footer-column a {
+        color: #bdb2aa;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .footer-column a:hover {
+        color: white;
+      }
+      .footer-bottom {
+        border-top: 1px solid #51453e;
+        padding-top: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .footer-bottom p {
+        margin: 0;
+        color: #bdb2aa;
+        font-size: 14px;
+      }
+      .footer-bottom-links {
+        display: flex;
+        gap: 25px;
+      }
+      .footer-bottom-links a {
+        color: #bdb2aa;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .footer-bottom-links a:hover {
+        color: white;
+      }
+      .social-icons {
+        display: flex;
+        gap: 20px;
+      }
+      .social-icons a {
+        color: #bdb2aa;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .social-icons a:hover {
+        color: #e9a23b;
+      }
+      @media (max-width: 600px) {
+        .header > div {
+          height: auto;
+          padding: 15px 20px;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .links {
+          gap: 20px;
+        }
+
+        .recipe-container {
+          width: 92%;
+          padding: 20px;
+        }
+
+        .footer {
+          padding: 35px 20px 15px;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-bottom-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <div class="logo">🍳 RecipeNest</div>
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="favorites.html">Favorites</a>
+        </nav>
+        <div></div>
+      </div>
+    </header>
+    <div class="recipe-container">
+      <h1 id="recipeName">Recipe Name</h1>
+      <img id="recipeImage" src="" alt="Recipe Image" />
+      <p>
+        <strong>Preparation Time</strong>
+        <span id="prepTime"></span>
+      </p>
+      <p>
+        <strong>Cooking Time</strong>
+        <span id="cookTime"></span>
+      </p>
+      <p>
+        <strong>Servings:</strong>
+        <span id="servings"></span>
+      </p>
+      <h2>Ingredients</h2>
+      <ul id="ingredientsList"></ul>
+      <h2>Instructions</h2>
+      <ul id="instructionsList"></ul>
+      <a href="recipes.html" class="back-button">← Back </a>
+    </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>🍳 RecipeNest</h2>
+          <p>Simple recipes. Delicious moments.</p>
+        </div>
+        <div class="footer-column">
+          <h3>EXPLORE</h3>
+          <a href="index.html">Home</a>
+          <a href="recipes.html">All Recipes</a>
+          <a href="favorites.html">Favorites</a>
+        </div>
+        <div class="footer-column">
+          <h3>SUPPORT</h3>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Feedback</a>
+          <a href="#">Recipe Suggestions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RecipeNest</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/aradhya_shahi_/">Instagram</a>
+          <a href="https://www.linkedin.com/in/aradhyak983">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
